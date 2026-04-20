@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign In - CrootJS</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <h2>Login dengan Google</h2>
+    
+    <div id="g_id_onload"
+         data-client_id="913953057682-rnnu6q9tvqfr6p960io76nm9fkio2m4i.apps.googleusercontent.com"
+         data-context="signin"
+         data-ux_mode="popup"
+         data-callback="handleGoogleLogin"
+         data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin"
+         data-type="standard"
+         data-shape="rectangular"
+         data-theme="outline"
+         data-text="signin_with"
+         data-size="large"
+         data-logo_alignment="left">
+    </div>
+
+    <hr>
+    <div id="hasil-login">
+        <i>Belum login...</i>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
