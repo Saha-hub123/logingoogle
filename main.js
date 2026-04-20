@@ -2,7 +2,7 @@
 import { setInner } from "https://cdn.jsdelivr.net/gh/crootjs/lib@main/dom.js";
 
 // Ganti dengan URL Golang kamu di Domcloud / Alwaysdata
-const BACKEND_URL = "https://backend-kamu.domcloud.io/api/auth/google";
+const BACKEND_URL = "https://afraid-pension-wud.sgp.dom.my.id/api/auth/google";
 
 // Fungsi callback ini harus berada di scope global (window) agar bisa dipanggil oleh script Google
 window.handleGoogleLogin = (response) => {
@@ -26,13 +26,13 @@ window.handleGoogleLogin = (response) => {
     .then(data => {
         // Gunakan CrootJS untuk menampilkan hasil sukses ke div id="hasil-login"
         const tampilanSukses = `
-            <h3 style="color: green;">${data.message}</h3>
-            <p>Halo, <b>${data.user.name}</b> (${data.user.email})</p>
+            <h3 style="color: #4ade80;">${data.message}</h3>
+            <p style="margin-top: 5px; font-size: 0.9em;">Halo, <b>${data.user.name}</b><br><span style="color: #94a3b8">${data.user.email}</span></p>
         `;
         setInner("hasil-login", tampilanSukses);
     })
     .catch(err => {
         console.error("Error:", err);
-        setInner("hasil-login", `<span style="color: red;">Error: ${err.message}</span>`);
+        setInner("hasil-login", `<span style="color: #f87171; font-weight: 600;">Error: ${err.message}</span>`);
     });
 };

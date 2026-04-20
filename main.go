@@ -61,7 +61,7 @@ func authGoogleHandler(w http.ResponseWriter, r *http.Request) {
 	name := payload.Claims["name"]
 
 	// Di sini kamu bisa menambahkan logika untuk mengecek user ke Database kamu
-	// ...
+	
 
 	// Kirim response sukses ke Frontend
 	response := map[string]interface{}{
