@@ -2,7 +2,7 @@
 import { setInner } from "https://cdn.jsdelivr.net/gh/crootjs/lib@main/dom.js";
 
 // Ganti dengan URL Golang kamu di Domcloud / Alwaysdata
-const BACKEND_URL = "https://afraid-pension-wud.sgp.dom.my.id/api/auth/google";
+const BACKEND_URL = "https://vibrant-toe-nus.sgp.dom.my.id/api/auth/google";
 
 // Fungsi callback ini harus berada di scope global (window) agar bisa dipanggil oleh script Google
 window.handleGoogleLogin = (response) => {
